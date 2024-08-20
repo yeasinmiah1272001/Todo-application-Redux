@@ -6,9 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { deleTodo, removeTodo } from "@/Redux/TodoSlice";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
+import { State } from "../../../type";
 
 const ListTodo = () => {
-  const selector = useSelector((state) => state?.todo?.todoList);
+  const selector = useSelector((state:State) => state?.todo?.todoList);
   const disPatch = useDispatch();
 
   const handleRemoveAll = () => {

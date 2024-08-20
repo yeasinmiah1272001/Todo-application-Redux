@@ -14,7 +14,7 @@ const InputFrom = () => {
     const disPatch = useDispatch()
 
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e: { preventDefault: () => void; }) =>{
         e.preventDefault()
         // console.log(e)
 
